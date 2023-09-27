@@ -1,7 +1,9 @@
-# push-to-azure-repos
+# push-to-azure-repos(ptar)
 
 ローカルリポジトリから別のGitリモートリポジトリにPushをする際、`git remote add {REMOTE_NAME} {REPOS_URL}`でリモートリポジトリを登録して実行できる。
 しかし、Azure Reposの場合は認証も絡んでくるのでPATの作成やコマンド実行時に認証情報を付与する必要がある。
+
+特に、Windowsの資格情報マネージャでキャッシュが保存されている場合は`git config`で認証情報をあらかじめ用意しても参照されていなさそうな挙動をしたので、てこずった。
 
 <img src="https://github.com/taokawarai/push-to-azure-repos/assets/35896206/7f50921f-bab9-4d48-b5b2-67d65b260db6" width=50%>
 
