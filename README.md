@@ -35,6 +35,9 @@ git -c http.extraHeader="Authorization: Basic $B64Pat" push {REMOTE_REPOSITORY_U
 ---
 - PATを作成：https://learn.microsoft.com/ja-jp/rest/api/azure/devops/tokens/pats/create?view=azure-devops-rest-7.1&tabs=HTTP#create-a-new-personal-access-token
 ```
+
+PowerShellでのコマンドレットの作成とその配布は以下を参照
+- https://github.com/Unitrends/unitrends-pstoolkit
 $uri = 'https://functionapp20180430103816.azurewebsites.net/api/PostJsonFunction1'
 $body = [System.Text.Encoding]::UTF8.GetBytes('{ "name":"値" }')
 
