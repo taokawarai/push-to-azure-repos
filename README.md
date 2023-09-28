@@ -36,12 +36,13 @@ git -c http.extraHeader="Authorization: Basic $B64Pat" push {REMOTE_REPOSITORY_U
 
 ---
 - PATを作成：https://learn.microsoft.com/ja-jp/rest/api/azure/devops/tokens/pats/create?view=azure-devops-rest-7.1&tabs=HTTP#create-a-new-personal-access-token
+- PowerShellでのコマンドレットの作成とその配布は以下を参照：https://github.com/Unitrends/unitrends-pstoolkit
 ```
-
-PowerShellでのコマンドレットの作成とその配布は以下を参照
-- https://github.com/Unitrends/unitrends-pstoolkit
 $uri = 'https://functionapp20180430103816.azurewebsites.net/api/PostJsonFunction1'
 $body = [System.Text.Encoding]::UTF8.GetBytes('{ "name":"値" }')
 
 Invoke-RestMethod -Method Post -Uri $uri -Headers $headers -Body $body -ContentType 'application/json'
 ```
+- C#でコマンドレットを作りたかったらこの辺りが参考になりそう。
+  - https://github.com/PowerShell/PowerShell/blob/master/docs/cmdlet-example/visual-studio-simple-example.md
+  - https://techinfoofmicrosofttech.osscons.jp/index.php?PowerShell%20Cmdlet%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9
